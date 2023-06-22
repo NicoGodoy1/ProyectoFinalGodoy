@@ -28,10 +28,8 @@ const ProductList = () => {
         return (
           <div key={user.id}>
           {/* <h1>Estoy en lista de producto</h1> */}
-            <Link to={`/detail/${user.id}`}>
-              <ProductCard data={user} />
-            </Link>
-        </div>  
+            <ProductCard data={user} />
+          </div>  
         );
       })}
     </div>

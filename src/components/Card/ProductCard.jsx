@@ -4,7 +4,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import "./ProductCard.css"
 import { BsCart3 } from 'react-icons/bs';
 import Count from '../Counter/ItemCount';
-
+import { Link } from "react-router-dom";
 // import { height, width } from '@mui/system';
 
 
@@ -25,6 +25,9 @@ const ProductCard = ({ data }) => {
           <button className="btn-morado align-items-center mx-2 my-2" type="button" >
             Agregar <i className='fs-6 ms-2 mb-2'> <BsCart3 /> </i>
           </button>
+          <Link to={`/detail/${data.id}`}>
+             <button className="btn-morado align-items-center mx-2 my-2">Ver detalle del producto</button> 
+          </Link>
           </ul>
         </div>
       </div>
