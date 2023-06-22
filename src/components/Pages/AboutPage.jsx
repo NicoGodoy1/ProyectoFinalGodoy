@@ -4,7 +4,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 
 const AboutPage = () => {
   return (
-    <h3>Estás en About</h3>
+    <h3>Estás en acerca de</h3>
   )
 }
 

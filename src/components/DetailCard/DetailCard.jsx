@@ -9,7 +9,7 @@ const DetailCard = ({ data }) => {
   return (
     <div className="fondo d-flex gap-3 justify-content-center align-items-center w-100 ">
       <div className=" detailcard tarjeta FlexContainer">
-        <div className="">
+        <div >
           <img src="https://armoto.vtexassets.com/arquivos/ids/163866-800-auto?v=638082337057430000&width=800&height=auto&aspect=true" className="card-img-top img-fluid" style={{height:"500px", width:"500px"}} alt="" /> 
           <h4 className='fw-semibold mt-2'>Moto G 72</h4>
         </div>

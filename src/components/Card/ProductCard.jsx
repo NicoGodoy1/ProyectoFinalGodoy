@@ -1,11 +1,11 @@
 import * as React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
-import "./ProductCard.css"
+import "./ProductCard.css";
 import { BsCart3 } from 'react-icons/bs';
 import Count from '../Counter/ItemCount';
 import { Link } from "react-router-dom";
-// import { height, width } from '@mui/system';
+
 
 
 const ProductCard = ({ data }) => {
@@ -18,15 +18,19 @@ const ProductCard = ({ data }) => {
             <h5 className="card-title text-center f-6 m-1 p-1" >{data.name}</h5>
           </div>
           <ul className="list-group list-group-flush">
-          <li className="list-group-item text-center fs-6 fw-bold">{data.email}</li>
+          <li className="list-group-item text-center email fw-bold">{data.email}</li>
           <p class="list-group-item text-center text-decoration-line-through text-muted border-0 rounded-4 m-0 p-0 fs-6 text-danger">$2000</p>
-          <h6 className="text-center f-2 text-success fw-bold">$2600</h6>
+          <h6 className="text-center f-2 text-success fw-bold">
+            $ 2600
+          </h6>
           <Count  />
-          <button className="btn-morado align-items-center mx-2 my-2" type="button" >
+          <button className="btn-morado  mx-2 my-2 w-100 d-flex justify-content-center align-items-center" type="button" style={{maxWidth:'100 px' }} >
             Agregar <i className='fs-6 ms-2 mb-2'> <BsCart3 /> </i>
           </button>
           <Link to={`/detail/${data.id}`}>
-             <button className="btn-morado align-items-center mx-2 my-2">Ver detalle del producto</button> 
+             <button className="btn-morado align-items-center mx-2 my-2" style={{maxWidth:'100 px' }}>
+              Ver detalle del producto
+             </button> 
           </Link>
           </ul>
         </div>
@@ -37,29 +41,3 @@ const ProductCard = ({ data }) => {
 }
 
 export default ProductCard;
-
-
-// import Card from '@mui/material/Card';
-// import CardContent from '@mui/material/CardContent';
-// import Typography from '@mui/material/Typography';
-// import { CardActionArea } from '@mui/material';
-
-
-// const ProductCard = ({ data }) => {
-//   return (
-//     <Card sx={{ maxWidth: 345 }}>
-//       <CardActionArea>
-//         <CardContent>
-//           <Typography gutterBottom variant="h5" component="div">
-//             {data.name}
-//           </Typography>
-//           <Typography variant="body2" color="text.secondary">
-//             {data.email}
-//           </Typography>
-//         </CardContent>
-//       </CardActionArea>
-//     </Card>
-//   )
-// }
-
-// export default ProductCard;

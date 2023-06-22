@@ -50,15 +50,15 @@ const NavBar = ({ color }) => {
         </li>
 
         <li  className="navbar text-decoration-none">
-          <Link  to="/" className="text-decoration-none text-white fs-6" >Home</Link>
+          <Link  to="/" className="text-decoration-none text-white fs-6" >Inicio</Link>
         </li>
 
         <li  className="navbar text-decoration-none">
-          <Link  to="/contact" className="text-decoration-none text-white fs-6" >Contact</Link>
+          <Link  to="/contact" className="text-decoration-none text-white fs-6" >Contacto</Link>
         </li>
 
         <li  className="navbar text-decoration-none">
-          <Link to="/about" className="text-decoration-none text-white fs-6" >About</Link>
+          <Link to="/about" className="text-decoration-none text-white fs-6" >Acerca de</Link>
         </li>
 
         
