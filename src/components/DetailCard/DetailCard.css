@@ -1,0 +1,29 @@
+.detailcard { 
+    width: 500px;
+    height: 800px;
+}
+
+.fondo {
+    height:800px;
+    width: 1200px;
+}
+
+.FlexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    background-color: #2f1d58;
+    height: 800px;
+    overflow: auto;
+    flex-direction: row;
+}
+
+.FlexContainer div {
+    width: 600px;
+    height: 600px;
+    margin: 20px;
+    background-color: white;
+}

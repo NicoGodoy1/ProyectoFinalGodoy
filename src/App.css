@@ -40,3 +40,9 @@
 .read-the-docs {
   color: #888;
 } */
+
+.lista_productos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
