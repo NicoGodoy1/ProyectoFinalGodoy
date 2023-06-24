@@ -14,23 +14,29 @@ const ProductList = () => {
     const [users, setUsers] =  useState([]);
 
     useEffect(() => {
+
       axios("https://jsonplaceholder.typicode.com/users/").then((res) =>
+
         setUsers(res.data)
+
       );
 
     }, [])      
 
+
   return (
     <div className="container">
+
       {users.map((user) => {
         return (
           <div key={user.id}>
             
             <ProductCard data={user} />
-            
+
           </div>  
         );
       })}
+
     </div>
 
 

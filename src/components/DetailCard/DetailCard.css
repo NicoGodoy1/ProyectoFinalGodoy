@@ -7,7 +7,12 @@
     height:800px;
     width: 1200px;
 }
+.fondoGradiente { 
+    
+    background-color: #C850C0;
+    background-image: linear-gradient(43deg, #C850C0 30%, #2f1d58 100%);
 
+}
 .FlexContainer {
     display: flex;
     flex-wrap: wrap;

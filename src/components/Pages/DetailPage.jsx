@@ -16,8 +16,10 @@ const DetailPage = () => {
   
     return (
       <div>
+        
         {/* <h4>Detail Page</h4> */}
         {user && <DetailCard data={user} />}
+
       </div>
     );
   };

@@ -7,8 +7,8 @@ import { BsCart3 } from 'react-icons/bs';
 
 const DetailCard = ({ data }) => {
   return (
-    <div className="fondo d-flex gap-3 justify-content-center align-items-center w-100 ">
-      <div className=" detailcard tarjeta FlexContainer">
+    <div className="fondo d-flex gap-3 justify-content-center align-items-center w-100">
+      <div className=" detailcard tarjeta FlexContainer fondoGradiente ">
         <div >
 
           <img 
