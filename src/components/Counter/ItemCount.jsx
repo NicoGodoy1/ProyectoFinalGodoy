@@ -18,11 +18,22 @@ const Count = () => {
     };
 
     return (
-    <div className='d-flex justify-content-between m-2'>
-      <button onClick={() => setCount(count - 1)}  className="btn-morado mx-2 w-25 h-50 grey"> - </button>
-      <p className='fontGrey pt-2 '>{count}</p>
-      <button onClick={increment} className="btn-morado mx-2 w-25 h-50 grey"> + </button>
-    </div>
+
+      <div className='w-100 d-flex justify-content-center align-items-center  w-100'>
+
+        <button onClick={() => setCount(count - 1)}  className="btn-morado mx-2 w-25 h-50 grey opacity-50">
+           - 
+        </button>
+
+        <p className='fontGrey pt-3 mx-5 '>
+          {count}
+        </p>
+
+        <button onClick={increment} className="btn-morado mx-1 w-25 h-50 grey opacity-50">
+           + 
+        </button>
+
+      </div>
   );
 }
 
