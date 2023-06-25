@@ -10,7 +10,7 @@ const Count = () => {
     const [count, setCount] = useState(0);
     
     useEffect (() => {
-        console.log("Hola")
+        
     }, [count]);
 
     const increment = () => {
@@ -19,9 +19,9 @@ const Count = () => {
 
     return (
 
-      <div className='w-100 d-flex justify-content-center align-items-center  w-100'>
+      <div className='w-100 d-flex justify-content-center align-items-center altura'>
 
-        <button onClick={() => setCount(count - 1)}  className="btn-morado mx-2 w-25 h-50 grey opacity-50">
+        <button onClick={() => setCount(count - 1)}  className="btn-morado mx-2 w-25 h-50 grey opacity-50 ms-2" style={{maxWidth:'26 px' }}>
            - 
         </button>
 
@@ -29,7 +29,7 @@ const Count = () => {
           {count}
         </p>
 
-        <button onClick={increment} className="btn-morado mx-1 w-25 h-50 grey opacity-50">
+        <button onClick={increment} className="btn-morado mx-1 w-25 h-50 grey opacity-50 ">
            + 
         </button>
 

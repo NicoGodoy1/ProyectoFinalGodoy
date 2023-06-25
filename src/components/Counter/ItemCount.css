@@ -8,6 +8,14 @@
 
 }
 
+.altura { 
+    height: 40px;
+}
+
+.boton {
+    max-width: 40px;
+
+}
 
 .btn-morado {
     background-color: rgb(68, 0, 153);

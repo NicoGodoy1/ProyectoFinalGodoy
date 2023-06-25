@@ -48,8 +48,7 @@ const DetailCard = ({ data }) => {
 
               <button className="btn-morado align-items-center mx-2 my-2 fs-6 d-flex align-items-center justify-content-center" type="button" >
                 COMPRAR
-
-                <i className='fs-4 ms-2 m-2'>
+                <i className='fs-6 ms-2 m-2 pb-1'>
                   <BsCart3 />
                 </i>
 

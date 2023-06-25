@@ -4,8 +4,17 @@
     /* max-width: 300px;
     max-height: 550px;*/
 }
+.detalle { 
+    font-size: 5px;
+}
 .email {
-    font-size: 15px;
+    font-size: 10px;
+}
+.precioAnterior { 
+    font-size: 12px;
+}
+.carrito { 
+    font-size: 14px;
 }
 .btn-morado {
     background-color: rgb(68, 0, 153);
@@ -13,6 +22,7 @@
     color: white;
     border-radius: 5px;
     font-size: 12px;
+    height: 25px;
 }
 .btn-morado-buscador {
     background-color: rgb(68, 0, 153);
