@@ -2,8 +2,7 @@ import * as React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import "./DetailCard.css"
-import { BsCart3 } from 'react-icons/bs';
-// import { height, width } from '@mui/system';
+import { BsCart3, BsTruck, BsShop} from 'react-icons/bs';
 
 const DetailCard = ({ data }) => {
   return (
@@ -28,11 +27,11 @@ const DetailCard = ({ data }) => {
 
           <div className="card-body f-6 m-1 p-1 d-flex align-items-center justify-content-center">
 
-            <h5 className="card-title text-center fs-2 fw-bold" >
-              {data.name}
-            </h5>
-
             <ul className="list-group list-group-flush">
+
+              <h5 className="card-title text-center fs-2 fw-bold" >
+                {data.name}
+              </h5>
 
               <li className="list-group-item text-center fs-4 fw-bold my-4">
                 {data.email}
@@ -51,8 +50,13 @@ const DetailCard = ({ data }) => {
                 <i className='fs-6 ms-2 m-2 pb-1'>
                   <BsCart3 />
                 </i>
-
               </button>
+
+              <p className='mt-3 d-flex flex-column align-items-start justify-content-center'>
+                <p className='fs-6 '  style={{textDecoration:"None"}} ><i className='fs-2 mx-2'><BsTruck /></i>Envío a Córdoba (5000): $1299 Entrega estimada 3 días habiles</p>
+                <p className=''><i className='fs-2 mx-2'><BsShop /></i>Retiro GRATIS en sucursal<i className='text-success'> ¡Retiralo YA!</i></p>
+              </p>
+
 
             </ul>
 
