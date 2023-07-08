@@ -7,7 +7,6 @@ import Count from '../Counter/ItemCount';
 import { Link } from "react-router-dom";
 
 
-
 const ProductCard = ({ data }) => {
 
   return (
