@@ -26,7 +26,7 @@ por categorías y un detalle particular de cada producto*
 - *Bootstrap 5.2*: Se utilizó esta librería principalmente en el diseño por medio del uso de sus clases (CSS)
 importadas por medio de (import 'bootstrap/dist/css/bootstrap.min.css';).
   
-- React-Icons: (https://react-icons.github.io/react-icons/search?q=bscart): librería de íconos  instalada através de
+- React-Icons: (https://react-icons.github.io/react-icons/): librería de íconos  instalada através de
 una dependencia npm. Se eligió porque permite importar solo los íconos que serás utilizados en el proyecto.
 Posee una lista muy extensa de íconos fáciles de previsualizar y utilizar.
 
