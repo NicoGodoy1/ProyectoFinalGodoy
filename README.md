@@ -13,9 +13,9 @@ en venta, agregarlos al carrito, abrir el carrito y generar la orden de compra. 
 por categorías y ver un detalle de los productos* 
 
 ## Tecnologías Utilizadas
--*React Js*
--*Vite*
--*MUI*
+- *React Js*
+- *Vite*
+- *MUI*
 - *JavaScript*
 - *JSX*
 - *CSS 3*
