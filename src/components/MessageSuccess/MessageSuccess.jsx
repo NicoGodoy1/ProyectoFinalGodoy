@@ -7,7 +7,7 @@ const Message = ({ purchaseID }) => {
     <Stack sx={{ width: '100%' }} spacing={2}>
       <Alert severity="success">
             ¡Su compra se ha procesado con éxito! 
-            El id de su pedido es: {purchaseID} 
+            El  ID  de su pedido es: {purchaseID} 
       </Alert>
     </Stack>
   );

@@ -125,7 +125,8 @@ const CheckoutPage = () => {
                       <img 
                         src={item.imgUrl} 
                         style={{height:"80px", width:"100px"}} 
-                        alt="FotoProducto" />
+                        alt="FotoProducto"
+                      />
                     </div>
                     <p className='d-flex flex-column justify-content-between'>
                       <span className="span text-dark" style={{width:"130px"}}>{item.name}</span>
@@ -138,8 +139,8 @@ const CheckoutPage = () => {
                 <div className='text-success hr'></div>
                 <p>Total<span className="span text-dark" ><b>${totalPrice}</b></span></p>
           </div>
-          <div className='d-flex fixed-bottom justify-content-center align-items-center bg-white'>
-            <p className='mb-0 pb-0'>
+          <div className='d-flex fixed-bottom justify-content-center align-items-center bg-white '>
+            <p className='mb-0 pb-0 '>
               {purchaseID && <Message purchaseID={purchaseID}/>}
             </p>
           </div>

@@ -4,7 +4,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import { BsCart3 } from 'react-icons/bs';
 
 
-const CartWidget = ({valor}) => {
+const CartIcon = ({valor}) => {
   return (
     <div className="d-flex mx-1 cart-icon"> 
         <i className="mx-2 btn btn-light carrito fs-4"><BsCart3/></i>
@@ -13,4 +13,4 @@ const CartWidget = ({valor}) => {
   );
 };
 
-export default CartWidget;
+export default CartIcon;

@@ -1,5 +1,5 @@
 import React from "react";
-import CartWidget from "../Cart/Cart";
+import CartIcon from "../CartIcon/CartIcon";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import { BsPhoneFlip } from 'react-icons/bs';
@@ -65,7 +65,7 @@ const NavBar = ({ color }) => {
               <p className="mt-1">¡Gracias por visitar nuestro sitio!</p>
             </li>
             <Link to="/cart">
-              <CartWidget valor={quantity}/>
+              <CartIcon valor={quantity}/>
             </Link>
         </ul>
       </ul>
