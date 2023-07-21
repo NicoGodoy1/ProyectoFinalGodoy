@@ -72,10 +72,11 @@ const ProductCard = ({ data }) => {
         <div className="card tarjetas__efecto m-1 d-flex justify-content-center align-items-center p-0 pb-4">
 
           <div>
-              <img 
-                src={imgUrl} className="img-fluid m-0 "  
-                style={{height:"300px", width:"340px"}} 
-              />
+              <Link to={`/detail/${id}`}><img 
+                  src={imgUrl} className="img-fluid m-0 "  
+                  style={{height:"300px", width:"340px"}} 
+                />
+              </Link>
               <div className='card-title text-center fs-4 m-1 fw-bold' >{name}</div>
 
               <div className='d-flex flex-row justify-content-center align-items-center mx-2'>
@@ -146,6 +147,17 @@ const ProductCard = ({ data }) => {
                   </div> 
                 </Link>
               )} 
+              {/* <Link to={`/detail/${id}`}>
+                  <div className='d-flex justify-content-center align-items-center '>
+                    <button 
+                      className="btn-morado mx-3 my-1 w-100 d-flex justify-content-center align-items-center opacity-50" 
+                      type="button" 
+                      style={{maxWidth:'150 px' }} 
+                    >
+                      detalle del producto
+                    </button>
+                  </div> 
+              </Link> */}
           </div>
 
         </div>

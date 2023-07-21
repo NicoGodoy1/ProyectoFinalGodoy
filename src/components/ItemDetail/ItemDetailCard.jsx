@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import "./ItemDetailCard.css"
 import { BsCart3, BsTruck, BsShop} from 'react-icons/bs';
+// import Count from '../Counter/ItemCount';
 
 import { useContext } from 'react';
 import { CartContext } from '../CartContext/ItemsContext';
@@ -12,11 +13,8 @@ const ItemDetailCard = ({ data }) => {
   const [cart, setCart] = useContext(CartContext);
 
   let id= data.id;
-  console.log(id);
   let price = data.precio;
-  console.log(price);
   let imgUrl = data.imagen;
-  console.log(imgUrl);
   let name = data.nombre;
   let precioAnterior = data.precio + (data.precio*0.1) 
   let description = data.descripcion
@@ -71,7 +69,7 @@ const ItemDetailCard = ({ data }) => {
 
           <img 
             src={data.imagen} 
-            className="card-img-top img-fluid" 
+            className="card-img-top img-fluid mt-3" 
             style={{height:"500px", width:"500px"}} alt="" 
           /> 
 
@@ -105,33 +103,49 @@ const ItemDetailCard = ({ data }) => {
 
               </h6>
               
-              <button 
-                className="btn-morado align-items-center mx-2 my-2 fs-6 " 
-                type="button" 
-                onClick={() => addToCart()}
-              >
-                AGREGAR AL CARRITO 
+              <li className='d-flex justify-content-center align-items-center mt-2' style={{ maxHeight:"70px"}}>
 
-              </button>
-
-              {quantityPerItem > 0 && (
+                {quantityPerItem > 0 && (
                   <button 
-                    className="btn-morado align-items-center mx-2 my-2 fs-6 " 
-                    style={{maxWidth:'26 px'}} 
+                    className="btn-morado w-25 ms-5 mx-4  mt-2" 
+                    style={{width:'100 px', maxHeight:"50px" }} 
                     onClick={() => removeItem(id)}
                   >
-                    QUITAR DEL CARRITO
+                    -
                   </button>
                 )}
 
-                {quantityPerItem > 0 && (
-                  <p className="bg-primary text-white mx-2 my-2 mt-5 fs-6 opacity-50 " 
-                    style={{maxWidth:'26 px' }} 
-                    onClick={() => removeItem(id)}
+                {quantityPerItem === 0 ? (
+                    <button 
+                      className="btn-morado mx-1 my-1 mt-4 w-100 mx-5 " 
+                      type="button" 
+                      style={{ width:"600px", height:"30px"}} 
+                      onClick={() => addToCart()}
+                    >
+                      AGREGAR AL CARRITO 
+                      <i className='carrito ms-2 mb-2 pt-1'><BsCart3/></i>
+                    </button>
+                  
+                
+                ) : (
+                  
+                  <button 
+                    className="btn-morado mx-4 mt-2 grey ms-2 w-25" 
+                    style={{width:'100 px', maxHeight:"50px" }} 
+                    onClick={() => addToCart()}
                   >
-                    cantidad de este item en el carrito: {quantityPerItem}
-                  </p>
+                    + 
+                  </button>
                 )}
+
+              </li> 
+
+              <p
+                className='bg-primary text-white fs-6 opacity-50 mt-2'
+                style={{height:"30 px", width:"100 px"}}
+              >
+                Items agregados: {quantityPerItem}
+              </p>
 
               <p className='mt-3 d-flex flex-column align-items-start justify-content-center'>
                 <p className='fs-6 '  style={{textDecoration:"None"}} ><i className='fs-2 mx-2'>

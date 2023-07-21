@@ -19,7 +19,7 @@ const Count = () => {
 
     return (
 
-      <div className='w-100 d-flex justify-content-center align-items-center altura'>
+      <div className='w-100 d-flex justify-content-center align-items-center altura contadorContainer h-25'>
 
         <button 
           onClick={() => setCount(count - 1)}  

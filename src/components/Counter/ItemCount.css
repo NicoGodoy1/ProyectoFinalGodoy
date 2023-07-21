@@ -16,7 +16,9 @@
     max-width: 40px;
 
 }
-
+.contadorContainer{
+    height: 20px;
+}
 .btn-morado {
     background-color: rgb(68, 0, 153);
     border-color: transparent;
