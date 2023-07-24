@@ -103,17 +103,24 @@ const ItemDetailCard = ({ data }) => {
 
               </h6>
               
-              <li className='d-flex justify-content-around align-items-center mt-2' style={{ maxHeight:"90px"}}>
+              <li className='d-flex justify-content-center align-items-center mt-2' style={{ maxHeight:"90px"}}>
 
                 {quantityPerItem > 0 && (
                   <button 
-                    className="btn btn-danger w-25 ms-5 mx-4  mt-2 btn-add-size" 
-                    style={{width:'120 px', maxHeight:"50px" }} 
+                    className="btn-morado w-25 ms-4 mx-4  mt-2 btn-add-size" 
+                    style={{width:'110 px', maxHeight:"50px" }} 
                     onClick={() => removeItem(id)}
                   >
-                    ELIMINAR<i className='ms-1 mb-5 fs-6'><BsCartDash/></i>
+                   ELIMINAR<i className='ms-1 mb-2 fs-6'><BsCartDash className='mb-1' /></i>
                   </button>
                 )}
+
+                {quantityPerItem > 0 && (
+                  <div className='fs-6 text-muted mx-5' style={{ width:"30px", maxHeight:"25px"}}>
+                    {quantityPerItem}
+                  </div>
+                )}
+
                 {quantityPerItem === 0 ? (
                     <button 
                       className="btn-morado mx-1 my-1 mt-4 w-100 mx-5 fs-6" 
@@ -121,19 +128,19 @@ const ItemDetailCard = ({ data }) => {
                       style={{ width:"600px", height:"30px"}} 
                       onClick={() => addToCart()}
                     >
-                      AGREGAR AL CARRITO 
-                      <i className='carrito ms-2 mb-2 pt-1'><BsCart3/></i>
+                      AGREGAR AL CARRITO
+                      <i className='carrito ms-2 mb-3 pt-1'><BsCart3 className='mb-1'/></i>
                     </button>
                   
                 
                 ) : (
                   
                   <button 
-                    className="btn btn-success mx-4 mt-2 ms-2 w-25 btn-add-size" 
-                    style={{width:'120 px', maxHeight:"50px" }} 
+                    className="btn-morado mx-4 mt-2 ms-2 me-4 w-25 btn-add-size" 
+                    style={{width:'110 px', maxHeight:"50px" }} 
                     onClick={() => addToCart()}
                   >
-                    AGREGAR<i className='ms-1 mb-5 fs-6'><BsCartPlus/></i>
+                    AGREGAR<i className='ms-1 mb-2 fs-6'><BsCartPlus className='mb-1'/></i>
                   </button>
                 )}
 
@@ -143,7 +150,7 @@ const ItemDetailCard = ({ data }) => {
                 className='bg-purple text-white fs-6 opacity-50 mt-2 mx-5'
                 style={{height:"30 px", width:"100 px"}}
               >
-                Items agregados: {quantityPerItem}
+                ¡Aprovechá los descuentos exclusivos!
               </p>
 
               <p className='d-flex flex-column justify-content-start align-items-center'>
