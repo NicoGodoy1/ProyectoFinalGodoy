@@ -47,7 +47,7 @@ export const Cart = () => {
   return (
 
     <div className="shopping-cart mt-3">
-        <div className="title fs-3 py-3"> Carrito de Compras ({quantity})</div>
+        <div className="title fs-3 py-3"> Mi carrito ({quantity})</div>
         {cart.map((item)=> {
         return (
           <div className="item">
@@ -99,7 +99,7 @@ export const Cart = () => {
         ) 
       })}
         <div className="my-3">
-          <div className="bg-secondary text-white fs-4 opacity-50" >Total: $ {totalPrice}</div>
+          <div className="bg-purple text-white fs-4 " >Total: $ {totalPrice}</div>
         </div>
         <div className="d-flex flex-row fixed-bottom" style={{ height:"90px"}}>
           <div className="mx-5 w-100" ></div>

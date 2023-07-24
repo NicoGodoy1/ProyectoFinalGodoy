@@ -1,13 +1,12 @@
 import React, { useEffect, useState , useContext } from "react";
 import { useParams } from "react-router-dom";
-import ProductCard from '../Card/ProductCard';
+import ItemCard from "../../ItemCard/ItemCard";
 import { Spinner } from "react-bootstrap";
-import { CartContext } from "../CartContext/ItemsContext";
-import { db } from "../../firebase/firebaseConfig";
+import { CartContext } from "../../CartContext/ItemsContext";
+import { db } from "../../../firebase/firebaseConfig";
 import { collection, query, getDocs, where, documentId, } from "firebase/firestore";
-
-
-
+import '../CategoryPage/CategoryPage.css'
+import CarouselOffers from "../../Carousel/Carousel";
 
 
 
@@ -42,9 +41,11 @@ const CategoryPage = () => {
 
   }, [familia]);
 
+
+
   return (
     <div>
-      <h1 className="text-primary fs-5 mt-4 opacity-75 ">{familia}</h1>
+      <h1 className="fs-3 mt-4 text-purple">{familia}</h1>
       <div class="text-success">
         <hr className="d-flex justify-content-center align-items-center mx-5"/>
       </div>
@@ -58,12 +59,13 @@ const CategoryPage = () => {
         items.map((item)=> {
           return (
             <div className="ms-5">
-              <ProductCard data={item} />
+              <ItemCard data={item} />
             </div>
           ) 
         })
       )}
     </div>
+    <CarouselOffers/>
     </div>
   );
 ;}

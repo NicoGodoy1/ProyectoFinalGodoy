@@ -2,7 +2,7 @@ import * as React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import "./ItemDetailCard.css"
-import { BsCart3, BsTruck, BsShop} from 'react-icons/bs';
+import { BsCart3, BsTruck, BsShop, BsCartPlus, BsCartDash } from 'react-icons/bs';
 // import Count from '../Counter/ItemCount';
 
 import { useContext } from 'react';
@@ -65,12 +65,12 @@ const ItemDetailCard = ({ data }) => {
 
       <div className=" detailcard tarjeta FlexContainer fondoGradiente ">
 
-        <div >
+        <div className='p-4'>
 
           <img 
             src={data.imagen} 
             className="card-img-top img-fluid mt-3" 
-            style={{height:"500px", width:"500px"}} alt="" 
+            style={{height:"480px", width:"480px"}} alt="" 
           /> 
 
           <h4 className='fw-semibold mt-2'>
@@ -80,9 +80,9 @@ const ItemDetailCard = ({ data }) => {
         </div>
 
 
-        <div className="card mb-2 justify-content-center align-items-center d-flex justify-content-center" >
+        <div className="card mb-2 d-flex justify-content-center align-items-center" >
 
-          <div className="card-body f-6 m-1 p-1 d-flex align-items-center justify-content-center">
+          <div className="card-body f-6 m-1 p-1 d-flex align-items-center justify-content-center p-5">
 
             <ul className="list-group list-group-flush">
 
@@ -95,29 +95,28 @@ const ItemDetailCard = ({ data }) => {
               </li>
 
 
-              <h6 className="d-flex fs-4 justify-content-center align-items-center text-center fs-2 text-success fw-bold">
-          
-                <p className='fs-3 ms-2 redondeado mb-3 my-4'>
+              <h6 className="d-flex fs-2 justify-content-center align-items-center text-center text-success fw-bold">
+                
+                <p className='fs-3 ms-4 redondeado mb-3 my-4'>
                   ${data.precio}
                 </p>
 
               </h6>
               
-              <li className='d-flex justify-content-center align-items-center mt-2' style={{ maxHeight:"70px"}}>
+              <li className='d-flex justify-content-around align-items-center mt-2' style={{ maxHeight:"90px"}}>
 
                 {quantityPerItem > 0 && (
                   <button 
-                    className="btn-morado w-25 ms-5 mx-4  mt-2" 
-                    style={{width:'100 px', maxHeight:"50px" }} 
+                    className="btn btn-danger w-25 ms-5 mx-4  mt-2 btn-add-size" 
+                    style={{width:'120 px', maxHeight:"50px" }} 
                     onClick={() => removeItem(id)}
                   >
-                    -
+                    ELIMINAR<i className='ms-1 mb-5 fs-6'><BsCartDash/></i>
                   </button>
                 )}
-
                 {quantityPerItem === 0 ? (
                     <button 
-                      className="btn-morado mx-1 my-1 mt-4 w-100 mx-5 " 
+                      className="btn-morado mx-1 my-1 mt-4 w-100 mx-5 fs-6" 
                       type="button" 
                       style={{ width:"600px", height:"30px"}} 
                       onClick={() => addToCart()}
@@ -130,32 +129,32 @@ const ItemDetailCard = ({ data }) => {
                 ) : (
                   
                   <button 
-                    className="btn-morado mx-4 mt-2 grey ms-2 w-25" 
-                    style={{width:'100 px', maxHeight:"50px" }} 
+                    className="btn btn-success mx-4 mt-2 ms-2 w-25 btn-add-size" 
+                    style={{width:'120 px', maxHeight:"50px" }} 
                     onClick={() => addToCart()}
                   >
-                    + 
+                    AGREGAR<i className='ms-1 mb-5 fs-6'><BsCartPlus/></i>
                   </button>
                 )}
 
               </li> 
 
               <p
-                className='bg-primary text-white fs-6 opacity-50 mt-2'
+                className='bg-purple text-white fs-6 opacity-50 mt-2 mx-5'
                 style={{height:"30 px", width:"100 px"}}
               >
                 Items agregados: {quantityPerItem}
               </p>
 
-              <p className='mt-3 d-flex flex-column align-items-start justify-content-center'>
-                <p className='fs-6 '  style={{textDecoration:"None"}} ><i className='fs-2 mx-2'>
-                  <BsTruck />
-                  </i>Envío a Córdoba (5000): $1299 Entrega estimada 3 días habiles
+              <p className='d-flex flex-column justify-content-start align-items-center'>
+                <p className='d-flex justify-content-center align-items-center' style={{textDecoration:"None"}}>
+                  <i className='fs-2 me-1'><BsTruck /></i>
+                  Envío a Córdoba (5000): $1299 Entrega estimada 3 días habiles
                 </p>
 
-                <p className=''><i className='fs-2 mx-2'>
-                  <BsShop />
-                  </i>Retiro GRATIS en sucursal<i className='text-success'> ¡Retiralo YA!</i>
+                <p className='d-flex justify-content-center align-items-center' style={{textDecoration:"None"}}>
+                  <i className='fs-2 me-1'><BsShop /></i>
+                  Retiro GRATIS en sucursal ¡Retiralo YA!
                 </p>
               </p>
 

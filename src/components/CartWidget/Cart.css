@@ -1,6 +1,10 @@
 * {
   box-sizing: border-box;
 }
+.bg-purple {
+  background-color:  rgb(68, 0, 153);
+
+}
  
 .shopping-cart {
     width: 1000px;

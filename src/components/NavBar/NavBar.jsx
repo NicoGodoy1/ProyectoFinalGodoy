@@ -5,9 +5,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import { BsPhoneFlip } from 'react-icons/bs';
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import "./NavBar.css"
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.min.js';
+import "./NavBar.css";
 import { useContext } from "react";
 import { CartContext } from "../CartContext/ItemsContext";
 

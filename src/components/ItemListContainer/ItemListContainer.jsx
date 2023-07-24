@@ -1,16 +1,16 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import ProductCard from "../Card/ProductCard";
+import ItemCard from "../ItemCard/ItemCard";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.min.js';
-import "../Product Detail/ProductList.css"
+// import 'bootstrap/dist/js/bootstrap.min.js';
+import "./ItemListContainer.css";
 import { Spinner } from "react-bootstrap";
 import { db } from "../../firebase/firebaseConfig";
 import { collection, query, getDocs } from "firebase/firestore";
 
 
 
-const ProductList = () => {
+const ItemListContainer = () => {
 
   const [items, setItems] = useState([]);
 
@@ -42,11 +42,11 @@ const ProductList = () => {
 
       ) : (
         items.map((item)=> {
-          return <ProductCard data={item} />
+          return <ItemCard data={item} />
         })
       )}
     </div>
   );
 }
 
-export default ProductList;
+export default ItemListContainer;

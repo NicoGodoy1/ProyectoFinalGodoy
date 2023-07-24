@@ -12,10 +12,11 @@ import { Footer } from "./components/Footer/Footer"
 import HomePage from "./components/Pages/HomePage";
 import AboutPage from "./components/Pages/AboutPage";
 import ContactPage from "./components/Pages/ContactPage";
-import DetailPage from "./components/Pages/DetailPage";
-import CategoryPage from "./components/Pages/CategoryPage"
+import { DetailPage } from "./components/Pages/DetailPage";
+import CategoryPage from "./components/Pages/CategoryPage/CategoryPage"
 import { CartPage } from "./components/Pages/CartPage";
 import CheckoutPage from "./components/Pages/CheckoutPage/CheckoutPage"
+import { ErrorPage } from "./components/Pages/ErrorPage";
 
 // CART
 import { ItemsContextProvider } from "./components/CartContext/ItemsContext";
@@ -35,6 +36,7 @@ const App = () => {
             <Route path="/category/:familia" element={< CategoryPage />} />
             <Route path="/cart" element={<CartPage />} />
             <Route path="/checkout" element={<CheckoutPage />} />
+            <Route path="*" element={<ErrorPage />} />
           </Routes>
           <Footer />
         </div>

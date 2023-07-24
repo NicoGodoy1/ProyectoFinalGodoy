@@ -1,7 +1,7 @@
 import * as React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
-import "./ProductCard.css";
+import "./ItemCard.css";
 import { BsCart3 } from 'react-icons/bs';
 import { Link } from "react-router-dom";
 import { useContext } from "react";
@@ -9,7 +9,7 @@ import { CartContext } from '../CartContext/ItemsContext';
 
 
 
-const ProductCard = ({ data }) => {
+const ItemCard = ({ data }) => {
 
   const [cart, setCart] = useContext(CartContext);
 
@@ -72,8 +72,10 @@ const ProductCard = ({ data }) => {
         <div className="card tarjetas__efecto m-1 d-flex justify-content-center align-items-center p-0 pb-4">
 
           <div>
-              <Link to={`/detail/${id}`}><img 
-                  src={imgUrl} className="img-fluid m-0 "  
+              <Link to={`/detail/${id}`}>
+                <img 
+                  src={imgUrl} 
+                  className="img-fluid m-0 "  
                   style={{height:"300px", width:"340px"}} 
                 />
               </Link>
@@ -106,7 +108,7 @@ const ProductCard = ({ data }) => {
                 )}
 
                 {quantityPerItem > 0 && (
-                  <div className='fs-6'>{quantityPerItem}</div>
+                  <div className='fs-6 text-muted'>{quantityPerItem}</div>
                 )}
 
                 {quantityPerItem === 0 ? (
@@ -147,18 +149,7 @@ const ProductCard = ({ data }) => {
                   </div> 
                 </Link>
               )} 
-              {/* <Link to={`/detail/${id}`}>
-                  <div className='d-flex justify-content-center align-items-center '>
-                    <button 
-                      className="btn-morado mx-3 my-1 w-100 d-flex justify-content-center align-items-center opacity-50" 
-                      type="button" 
-                      style={{maxWidth:'150 px' }} 
-                    >
-                      detalle del producto
-                    </button>
-                  </div> 
-              </Link> */}
-          </div>
+          </div> 
 
         </div>
 
@@ -168,7 +159,7 @@ const ProductCard = ({ data }) => {
   );
 }
 
-export default ProductCard;
+export default ItemCard;
 
 
 

@@ -1,14 +1,24 @@
 *{
     text-decoration: none;
 }
+
+.bg-purple {
+    background-color:  rgb(68, 0, 153);
+}
 .detailcard { 
     width: 500px;
     height: 800px;
 }
 
+.btn-add-size {
+    font-size: 15px;
+}
+
 .fondo {
-    height:800px;
-    width: 1200px;
+    height:50%;
+    /* height: 800px */
+    width: 90%px;
+    /* width: 1200px; */
 }
 .fondoGradiente { 
     

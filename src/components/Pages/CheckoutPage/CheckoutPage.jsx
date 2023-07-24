@@ -147,8 +147,7 @@ const CheckoutPage = () => {
         </div>
 
       </div>
-
-
+      
     </div>
   )
 }
