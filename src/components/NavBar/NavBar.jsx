@@ -36,7 +36,9 @@ const NavBar = ({ color }) => {
             >
             <BsPhoneFlip />
             </i>
-            <a className="text-decoration-none fw-bolder fs-3 text-white">CeluShop</a>
+            <Link to="/" >
+              <p className="text-decoration-none fw-bolder fs-3 text-white mb-0">CeluShop</p>
+            </Link>
         </li>
 
         <li  className="navbar text-decoration-none">
