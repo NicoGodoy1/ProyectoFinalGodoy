@@ -30,3 +30,5 @@ importadas por medio de (import 'bootstrap/dist/css/bootstrap.min.css';).
 una dependencia npm. Se eligió porque permite importar solo los íconos que serás utilizados en el proyecto.
 Posee una lista muy extensa de íconos fáciles de previsualizar y utilizar.
 
+-FireBase
+
