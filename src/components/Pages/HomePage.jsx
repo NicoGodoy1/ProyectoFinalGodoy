@@ -9,6 +9,7 @@ import CarouselOffers from '../Carousel/Carousel';
 const HomePage = () => {
   return (
     <div>
+      <CarouselOffers/>
       <GreetingContainer greeting="¡Aprovechá las ofertas destacadas!" />
       <h3 className='bg-dark bg-gradient w-50 text-white mt-2 bg-opacity-75 rounded-end'>
         ¡Conocé toda nuestra gama de celulares Motorola!
@@ -16,7 +17,6 @@ const HomePage = () => {
       <div className="d-flex gap-3 justify-content-center align-items-center">
           <ItemListContainer />
       </div>
-      <CarouselOffers/>
     </div>
 
   )
